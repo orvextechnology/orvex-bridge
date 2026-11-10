@@ -1,0 +1,224 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080d20">
+<meta name="description" content="Submit a digital services project inquiry to ORVEX BRIDGE.">
+<title>Client Request Portal | ORVEX BRIDGE</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+font-family:Arial,sans-serif;
+background:#080d20;
+color:#f4f5ff;
+line-height:1.7;
+}
+header{
+padding:20px 7%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+gap:15px;
+border-bottom:1px solid #252b45;
+}
+.logo{font-size:21px;font-weight:bold;letter-spacing:2px}
+.logo span{color:#a78bfa}
+nav{display:flex;gap:16px;flex-wrap:wrap}
+nav a{color:#c8cbe0;text-decoration:none;font-size:13px}
+nav a:hover{color:#a78bfa}
+.hero{
+padding:65px 7% 45px;
+background:linear-gradient(120deg,#111b3c,#17112e);
+}
+.tag{color:#a78bfa;font-size:12px;letter-spacing:3px;font-weight:bold}
+h1{font-size:clamp(30px,6vw,46px);line-height:1.2;margin:12px 0}
+.hero p{color:#b9bfd5;max-width:650px}
+.container{max-width:850px;margin:auto;padding:40px 7%}
+.form-card{
+background:#111a34;
+border:1px solid #293354;
+border-radius:14px;
+padding:25px;
+}
+.form-card h2{margin-bottom:8px;font-size:23px}
+.intro{color:#b9bfd5;font-size:14px;margin-bottom:25px}
+label{
+display:block;
+font-size:14px;
+font-weight:bold;
+margin:17px 0 7px;
+}
+input,select,textarea{
+width:100%;
+padding:13px;
+background:#080f25;
+border:1px solid #344064;
+border-radius:7px;
+color:white;
+font-size:15px;
+font-family:Arial,sans-serif;
+}
+input:focus,select:focus,textarea:focus{
+outline:2px solid #8b6be0;
+}
+textarea{min-height:130px;resize:vertical}
+button{
+width:100%;
+margin-top:23px;
+padding:15px;
+background:#7651d8;
+color:white;
+border:0;
+border-radius:8px;
+font-size:15px;
+font-weight:bold;
+cursor:pointer;
+}
+button:hover{background:#916df2}
+.notice{
+margin-top:20px;
+padding:16px;
+background:#171f3a;
+border-left:3px solid #a78bfa;
+border-radius:6px;
+color:#c9cde0;
+font-size:13px;
+}
+#message{margin-top:15px;color:#c4b5fd;font-size:14px}
+footer{
+padding:30px 7%;
+text-align:center;
+border-top:1px solid #252b45;
+color:#8992ad;
+font-size:13px;
+}
+footer strong{color:#a78bfa}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">ORVEX <span>BRIDGE</span></div>
+<nav>
+<a href="index.html">Home</a>
+<a href="company.html">Company</a>
+<a href="portfolio.html">Portfolio</a>
+<a href="contact.html">Contact</a>
+</nav>
+</header>
+
+<section class="hero">
+<div class="tag">BUSINESS INQUIRIES</div>
+<h1>Tell Us About Your Project</h1>
+<p>
+Have a website, mobile application or digital business project?
+Send us your inquiry and tell us what you need.
+</p>
+</section>
+
+<main class="container">
+
+<div class="form-card">
+<h2>Client Request Form</h2>
+<p class="intro">
+Complete the information below to prepare your project inquiry.
+</p>
+
+<form id="requestForm">
+
+<label for="name">Full Name *</label>
+<input id="name" type="text" placeholder="Your full name" required>
+
+<label for="company">Company / Organization</label>
+<input id="company" type="text" placeholder="Company name">
+
+<label for="email">Business Email *</label>
+<input id="email" type="email" placeholder="you@company.com" required>
+
+<label for="country">Country *</label>
+<input id="country" type="text" placeholder="Your country" required>
+
+<label for="service">Service Required *</label>
+<select id="service" required>
+<option value="">Select a service</option>
+<option>Website Testing</option>
+<option>Mobile App Testing</option>
+<option>AI Data Services</option>
+<option>Business Support</option>
+<option>African Talent Network</option>
+<option>African Market Intelligence</option>
+<option>Other Inquiry</option>
+</select>
+
+<label for="website">Website or App Link</label>
+<input id="website" type="url" placeholder="https://example.com">
+
+<label for="details">Project Details *</label>
+<textarea id="details" placeholder="Describe your project, requirements and what you need help with..." required></textarea>
+
+<button type="submit">Continue to Send Inquiry</button>
+
+<p id="message"></p>
+
+</form>
+
+<div class="notice">
+<strong>Important:</strong>
+This initial portal prepares your inquiry in your email application.
+It does not yet save requests to an online database or automatically
+notify our team. Your email application must be configured to send it.
+</div>
+
+</div>
+
+</main>
+
+<footer>
+<p>A product of <strong>ORVEX TECHNOLOGIES</strong></p>
+<p>Connecting Global Businesses. Empowering African Talent.</p>
+<p>© 2026 ORVEX BRIDGE</p>
+</footer>
+
+<script>
+document.getElementById("requestForm").addEventListener("submit",function(e){
+e.preventDefault();
+
+const name=document.getElementById("name").value.trim();
+const company=document.getElementById("company").value.trim();
+const email=document.getElementById("email").value.trim();
+const country=document.getElementById("country").value.trim();
+const service=document.getElementById("service").value;
+const website=document.getElementById("website").value.trim();
+const details=document.getElementById("details").value.trim();
+
+if(!this.reportValidity()) return;
+
+const subject="ORVEX BRIDGE Project Inquiry";
+const body=
+"NEW PROJECT INQUIRY\n\n"+
+"Name: "+name+"\n"+
+"Company: "+company+"\n"+
+"Email: "+email+"\n"+
+"Country: "+country+"\n"+
+"Service: "+service+"\n"+
+"Website/App: "+website+"\n\n"+
+"Project Details:\n"+details;
+
+const mailto="mailto:orvexai.support@gmail.com?subject="+
+encodeURIComponent(subject)+"&body="+encodeURIComponent(body);
+
+document.getElementById("message").textContent=
+"Opening your email application. Please review and send your inquiry.";
+
+window.location.href=mailto;
+});
+</script>
+
+</body>
+  </html>
+  
