@@ -1,0 +1,423 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080d20">
+<title>ORVEX EARN | Global Opportunities</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #080d20;
+    color: #f5f7ff;
+    line-height: 1.6;
+}
+
+header {
+    background: #101a35;
+    padding: 18px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    border-bottom: 1px solid #263657;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #d8b45c;
+}
+
+nav a {
+    color: #dce4f7;
+    text-decoration: none;
+    margin-left: 14px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #e4bd62;
+}
+
+.hero {
+    padding: 65px 7%;
+    text-align: center;
+    background: linear-gradient(135deg, #101a35, #172b50);
+}
+
+.hero h1 {
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.hero h1 span {
+    color: #e2b957;
+}
+
+.hero p {
+    max-width: 650px;
+    margin: auto;
+    color: #c4cee2;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 35px auto;
+}
+
+.notice {
+    background: #17243e;
+    border: 1px solid #52617d;
+    padding: 15px;
+    border-radius: 10px;
+    color: #d9e3f6;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+.section-title {
+    font-size: 25px;
+    margin-bottom: 18px;
+}
+
+.categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 14px;
+    margin-bottom: 35px;
+}
+
+.category {
+    background: #111d38;
+    border: 1px solid #263958;
+    border-radius: 12px;
+    padding: 20px 12px;
+    text-align: center;
+}
+
+.category .emoji {
+    font-size: 27px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.category h3 {
+    font-size: 15px;
+}
+
+.search-area {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 22px;
+}
+
+.search-area input,
+.search-area select {
+    flex: 1;
+    min-width: 150px;
+    padding: 13px;
+    border-radius: 8px;
+    border: 1px solid #344766;
+    background: #111d38;
+    color: white;
+    outline: none;
+}
+
+.opportunities {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+}
+
+.job-card {
+    background: #111d38;
+    border: 1px solid #2a3c5d;
+    border-radius: 13px;
+    padding: 22px;
+    transition: 0.2s;
+}
+
+.job-card:hover {
+    border-color: #d8b45c;
+    transform: translateY(-3px);
+}
+
+.tag {
+    display: inline-block;
+    background: #263958;
+    color: #e5c36f;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    margin-bottom: 12px;
+}
+
+.job-card h3 {
+    font-size: 19px;
+    margin-bottom: 9px;
+}
+
+.job-card p {
+    color: #b9c5da;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.job-info {
+    color: #e2bd69;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+button {
+    background: #d8b45c;
+    color: #10172a;
+    border: none;
+    padding: 11px 17px;
+    border-radius: 7px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background: #f0cc78;
+}
+
+.empty {
+    display: none;
+    color: #b9c5da;
+    padding: 25px;
+    text-align: center;
+    grid-column: 1 / -1;
+}
+
+footer {
+    text-align: center;
+    padding: 30px 15px;
+    background: #101a35;
+    color: #9daac2;
+    margin-top: 50px;
+    font-size: 13px;
+}
+
+footer a {
+    color: #e2bd69;
+    text-decoration: none;
+}
+
+@media(max-width:600px) {
+    .hero h1 {
+        font-size: 29px;
+    }
+
+    nav a {
+        margin-left: 8px;
+        font-size: 12px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">ORVEX BRIDGE</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="invest.html">Invest</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Welcome to <span>ORVEX EARN</span></h1>
+    <p>
+        Discover digital work opportunities, develop valuable skills
+        and connect with businesses looking for global talent.
+    </p>
+</section>
+
+<main class="container">
+
+    <div class="notice">
+        <strong>Opportunity preview:</strong>
+        The opportunities displayed below are demonstration listings.
+        Applications, paid assignments and earnings will become available
+        after the platform's verification and backend systems are connected.
+        Never pay anyone to unlock a job.
+    </div>
+
+    <h2 class="section-title">Explore Opportunity Categories</h2>
+
+    <section class="categories">
+        <div class="category">
+            <span class="emoji">🌐</span>
+            <h3>Website Testing</h3>
+        </div>
+
+        <div class="category">
+            <span class="emoji">📱</span>
+            <h3>App Testing</h3>
+        </div>
+
+        <div class="category">
+            <span class="emoji">🤖</span>
+            <h3>AI Data Tasks</h3>
+        </div>
+
+        <div class="category">
+            <span class="emoji">💻</span>
+            <h3>Freelance Projects</h3>
+        </div>
+
+        <div class="category">
+            <span class="emoji">🌍</span>
+            <h3>Remote Work</h3>
+        </div>
+    </section>
+
+    <h2 class="section-title">Explore Opportunities</h2>
+
+    <div class="search-area">
+        <input
+            type="search"
+            id="searchInput"
+            placeholder="Search opportunities..."
+            aria-label="Search opportunities"
+        >
+
+        <select id="categoryFilter" aria-label="Filter by category">
+            <option value="all">All Categories</option>
+            <option value="website">Website Testing</option>
+            <option value="app">App Testing</option>
+            <option value="ai">AI Data Tasks</option>
+            <option value="freelance">Freelance Projects</option>
+            <option value="remote">Remote Work</option>
+        </select>
+    </div>
+
+    <section class="opportunities" id="opportunityList">
+
+        <article class="job-card" data-category="website">
+            <span class="tag">Website Testing</span>
+            <h3>Website Usability Review</h3>
+            <p>
+                Review a demonstration website and identify navigation,
+                layout and usability issues.
+            </p>
+            <div class="job-info">Type: Sample assignment</div>
+            <button onclick="showNotice()">View Opportunity</button>
+        </article>
+
+        <article class="job-card" data-category="app">
+            <span class="tag">App Testing</span>
+            <h3>Mobile App Experience Test</h3>
+            <p>
+                Explore a sample mobile application and document
+                any problems you discover.
+            </p>
+            <div class="job-info">Type: Sample assignment</div>
+            <button onclick="showNotice()">View Opportunity</button>
+        </article>
+
+        <article class="job-card" data-category="ai">
+            <span class="tag">AI Data Tasks</span>
+            <h3>AI Data Annotation</h3>
+            <p>
+                Learn how AI data annotation works through a sample
+                text classification assignment.
+            </p>
+            <div class="job-info">Type: Sample assignment</div>
+            <button onclick="showNotice()">View Opportunity</button>
+        </article>
+
+        <article class="job-card" data-category="freelance">
+            <span class="tag">Freelance Projects</span>
+            <h3>Digital Content Support</h3>
+            <p>
+                A sample project involving digital content organization
+                and basic online research.
+            </p>
+            <div class="job-info">Type: Sample project</div>
+            <button onclick="showNotice()">View Opportunity</button>
+        </article>
+
+        <article class="job-card" data-category="remote">
+            <span class="tag">Remote Work</span>
+            <h3>Online Business Research</h3>
+            <p>
+                Explore a sample business research task involving
+                publicly available market information.
+            </p>
+            <div class="job-info">Type: Sample assignment</div>
+            <button onclick="showNotice()">View Opportunity</button>
+        </article>
+
+        <div class="empty" id="emptyMessage">
+            No matching opportunities found.
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 ORVEX BRIDGE. All Rights Reserved.</p>
+    <p>Connecting Global Businesses with Emerging Talent.</p>
+    <p><a href="index.html">Return to Homepage</a></p>
+</footer>
+
+<script>
+const searchInput = document.getElementById("searchInput");
+const categoryFilter = document.getElementById("categoryFilter");
+const cards = document.querySelectorAll(".job-card");
+const emptyMessage = document.getElementById("emptyMessage");
+
+function filterOpportunities() {
+    const search = searchInput.value.toLowerCase().trim();
+    const category = categoryFilter.value;
+    let visibleCount = 0;
+
+    cards.forEach(card => {
+        const matchesSearch = card.textContent.toLowerCase().includes(search);
+        const matchesCategory =
+            category === "all" || card.dataset.category === category;
+
+        const visible = matchesSearch && matchesCategory;
+        card.style.display = visible ? "block" : "none";
+
+        if (visible) visibleCount++;
+    });
+
+    emptyMessage.style.display = visibleCount === 0 ? "block" : "none";
+}
+
+searchInput.addEventListener("input", filterOpportunities);
+categoryFilter.addEventListener("change", filterOpportunities);
+
+function showNotice() {
+    alert(
+        "This is a demonstration opportunity. " +
+        "The application system is not yet connected. " +
+        "Please check back when verified opportunities are launched."
+    );
+}
+</script>
+
+</body>
+      </html>
+      
