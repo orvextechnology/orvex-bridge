@@ -6,7 +6,7 @@ import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 const SUPABASE_URL = "https://xbsbhkraqfzwflhgvbzp.supabase.co";
 
 // Paste your Supabase PUBLISHABLE KEY between the quotes below.
-const SUPABASE_PUBLISHABLE_KEY = "PASTE_YOUR_PUBLISHABLE_KEY_HERE";
+const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_zmssX5bLhG5sgGynDCkLDw_mNV3xpc9";
 
 // Create Supabase connection
 export const supabase = createClient(
