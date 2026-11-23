@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080d20">
+<title>Login | ORVEX BRIDGE</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+font-family:Arial,sans-serif;
+background:#080d20;
+color:white;
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
+}
+.container{
+width:100%;
+max-width:430px;
+background:#111a32;
+border:1px solid #293858;
+border-radius:16px;
+padding:32px;
+}
+.logo{
+text-align:center;
+font-size:25px;
+font-weight:900;
+letter-spacing:2px;
+margin-bottom:10px;
+}
+.logo span{color:#a78bfa}
+.subtitle{
+text-align:center;
+color:#aab6cf;
+font-size:14px;
+margin-bottom:30px;
+}
+h2{text-align:center;margin-bottom:25px}
+label{
+display:block;
+font-size:13px;
+color:#d5dced;
+margin-bottom:7px;
+}
+input{
+width:100%;
+padding:14px;
+margin-bottom:19px;
+background:#080d20;
+border:1px solid #354568;
+border-radius:8px;
+color:white;
+font-size:14px;
+outline:none;
+}
+input:focus{border-color:#a78bfa}
+.forgot{
+text-align:right;
+margin-top:-10px;
+margin-bottom:22px;
+font-size:13px;
+}
+a{color:#b9a6ff;text-decoration:none}
+button{
+width:100%;
+padding:14px;
+border:none;
+border-radius:8px;
+background:#7954e8;
+color:white;
+font-size:15px;
+font-weight:bold;
+cursor:pointer;
+}
+button:hover{opacity:.9}
+.register{
+text-align:center;
+font-size:14px;
+color:#aab6cf;
+margin-top:24px;
+}
+.back{
+display:block;
+text-align:center;
+margin-top:22px;
+font-size:13px;
+color:#aab6cf;
+}
+.note{
+text-align:center;
+font-size:12px;
+color:#8997b5;
+margin-top:20px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="logo">ORVEX<span> BRIDGE</span></div>
+
+<p class="subtitle">
+Connecting People, Businesses and Opportunities Worldwide.
+</p>
+
+<h2>Welcome Back</h2>
+
+<form id="loginForm">
+
+<label for="email">Email Address</label>
+<input
+type="email"
+id="email"
+placeholder="Enter your email address"
+required
+>
+
+<label for="password">Password</label>
+<input
+type="password"
+id="password"
+placeholder="Enter your password"
+required
+>
+
+<div class="forgot">
+<a href="forgot-password.html">Forgot Password?</a>
+</div>
+
+<button type="submit">Login to Account</button>
+
+</form>
+
+<div class="register">
+Don't have an account?
+<a href="register.html">Create Account</a>
+</div>
+
+<p class="note">
+Secure account access for ORVEX BRIDGE members.
+</p>
+
+<a href="index.html" class="back">← Back to Homepage</a>
+
+</div>
+
+<script>
+document.getElementById("loginForm").addEventListener("submit",function(e){
+e.preventDefault();
+alert("Login system is being connected. Please check back soon.");
+});
+</script>
+
+</body>
+  </html>
+  
