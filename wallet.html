@@ -1,0 +1,399 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080d20">
+<title>ORVEX Wallet | ORVEX BRIDGE</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #080d20;
+    color: #f5f7ff;
+    line-height: 1.6;
+}
+
+header {
+    background: #101a35;
+    padding: 18px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    border-bottom: 1px solid #263657;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #d8b45c;
+}
+
+nav a {
+    color: #dce4f7;
+    text-decoration: none;
+    margin-left: 13px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #e4bd69;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 35px auto;
+}
+
+.heading {
+    margin-bottom: 25px;
+}
+
+.heading h1 {
+    font-size: 29px;
+}
+
+.heading p {
+    color: #aebbd3;
+    font-size: 14px;
+}
+
+.demo-notice {
+    background: #261d20;
+    border: 1px solid #75464a;
+    border-radius: 10px;
+    padding: 17px;
+    color: #f0dada;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+.wallet-overview {
+    background: linear-gradient(135deg, #172b50, #101a35);
+    border: 1px solid #405475;
+    border-radius: 15px;
+    padding: 28px;
+    margin-bottom: 22px;
+}
+
+.wallet-overview p {
+    color: #c3cfe4;
+    font-size: 14px;
+}
+
+.balance {
+    font-size: 34px;
+    color: #e5c16d;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.balance-label {
+    font-size: 12px;
+    color: #9daac2;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-bottom: 30px;
+}
+
+.card {
+    background: #111d38;
+    border: 1px solid #2a3c5d;
+    border-radius: 12px;
+    padding: 21px;
+}
+
+.card p {
+    color: #aebbd3;
+    font-size: 13px;
+}
+
+.card h2 {
+    font-size: 24px;
+    margin-top: 9px;
+    color: #e2bd69;
+}
+
+.section-title {
+    font-size: 21px;
+    margin-bottom: 17px;
+    color: #e2bd69;
+}
+
+.actions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.action-card {
+    background: #111d38;
+    border: 1px solid #2a3c5d;
+    padding: 22px;
+    border-radius: 12px;
+}
+
+.action-card p {
+    font-size: 13px;
+    color: #b9c5da;
+    margin: 8px 0 15px;
+}
+
+button {
+    border: none;
+    border-radius: 7px;
+    padding: 12px 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.primary {
+    background: #d8b45c;
+    color: #10172a;
+    width: 100%;
+}
+
+.primary:hover {
+    background: #f0cc78;
+}
+
+.secondary {
+    background: #293b5b;
+    color: white;
+    width: 100%;
+}
+
+.transaction-box {
+    background: #111d38;
+    border: 1px solid #2a3c5d;
+    border-radius: 12px;
+    padding: 22px;
+    margin-bottom: 30px;
+}
+
+.transaction {
+    padding: 15px 0;
+    border-bottom: 1px solid #293b5b;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: 13px;
+}
+
+.transaction:last-child {
+    border-bottom: none;
+}
+
+.transaction span:last-child {
+    color: #aebbd3;
+    text-align: right;
+}
+
+.empty {
+    text-align: center;
+    color: #aebbd3;
+    padding: 22px 5px;
+    font-size: 13px;
+}
+
+.security {
+    background: #111d38;
+    border: 1px solid #2a3c5d;
+    border-radius: 12px;
+    padding: 22px;
+    margin-bottom: 30px;
+}
+
+.security p {
+    color: #b9c5da;
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+footer {
+    background: #101a35;
+    text-align: center;
+    padding: 28px 15px;
+    margin-top: 50px;
+    color: #9daac2;
+    font-size: 13px;
+}
+
+footer a {
+    color: #e2bd69;
+    text-decoration: none;
+}
+
+@media(max-width:600px) {
+    .actions {
+        grid-template-columns: 1fr;
+    }
+
+    .balance {
+        font-size: 29px;
+    }
+
+    nav a {
+        font-size: 12px;
+        margin-left: 7px;
+    }
+
+    .heading h1 {
+        font-size: 25px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">ORVEX BRIDGE</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="earn.html">Earn</a>
+        <a href="invest.html">Invest</a>
+        <a href="profile.html">Profile</a>
+    </nav>
+</header>
+
+<main class="container">
+
+    <div class="heading">
+        <h1>My Wallet</h1>
+        <p>Manage your ORVEX financial activity.</p>
+    </div>
+
+    <div class="demo-notice">
+        <strong>Wallet preview:</strong>
+        This wallet is currently a demonstration interface.
+        No real money is held, deposited, transferred or withdrawn.
+        Live financial services will require secure backend integration,
+        approved payment providers and applicable regulatory checks.
+    </div>
+
+    <section class="wallet-overview">
+        <p>Available Wallet Balance</p>
+
+        <div class="balance">Not Connected</div>
+
+        <span class="balance-label">
+            Your real balance will appear after secure wallet integration.
+        </span>
+    </section>
+
+    <section class="cards">
+
+        <div class="card">
+            <p>Total Earnings</p>
+            <h2>Not Connected</h2>
+        </div>
+
+        <div class="card">
+            <p>Pending Earnings</p>
+            <h2>Not Connected</h2>
+        </div>
+
+        <div class="card">
+            <p>Total Withdrawals</p>
+            <h2>Not Connected</h2>
+        </div>
+
+    </section>
+
+    <h2 class="section-title">Wallet Actions</h2>
+
+    <section class="actions">
+
+        <div class="action-card">
+            <h3>Deposit Funds</h3>
+            <p>
+                Deposit functionality will be introduced through
+                an approved and secure payment provider.
+            </p>
+
+            <button class="primary" onclick="showMessage()">
+                Deposit Coming Soon
+            </button>
+        </div>
+
+        <div class="action-card">
+            <h3>Withdraw Funds</h3>
+            <p>
+                Withdrawals will become available after account
+                verification and wallet integration.
+            </p>
+
+            <button class="secondary" onclick="showMessage()">
+                Withdraw Coming Soon
+            </button>
+        </div>
+
+    </section>
+
+    <section class="transaction-box">
+
+        <h2 class="section-title">Recent Transactions</h2>
+
+        <div class="empty">
+            <p>No transactions available.</p>
+            <p>Your transaction history will appear here after wallet integration.</p>
+        </div>
+
+    </section>
+
+    <section class="security">
+
+        <h2 class="section-title">Wallet Security</h2>
+
+        <p>
+            ORVEX BRIDGE will use secure account verification,
+            protected transaction records and approved payment
+            infrastructure when financial services are launched.
+        </p>
+
+        <p>
+            Never share your password, verification codes or
+            private financial information with strangers.
+        </p>
+
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 ORVEX BRIDGE. All Rights Reserved.</p>
+    <p>Connecting Global Businesses with Emerging Talent.</p>
+    <p><a href="dashboard.html">Return to Dashboard</a></p>
+</footer>
+
+<script>
+function showMessage() {
+    alert(
+        "This wallet feature is not active yet. " +
+        "ORVEX BRIDGE will announce its official launch " +
+        "when the secure financial system is ready."
+    );
+}
+</script>
+
+</body>
+         </html>
+         
