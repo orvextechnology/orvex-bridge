@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080d20">
+<title>Create Account | ORVEX BRIDGE</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+font-family:Arial,sans-serif;
+background:#080d20;
+color:white;
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:25px 15px;
+}
+.container{
+width:100%;
+max-width:480px;
+background:#111a32;
+border:1px solid #293858;
+border-radius:16px;
+padding:30px;
+}
+.logo{
+text-align:center;
+font-size:25px;
+font-weight:900;
+letter-spacing:2px;
+margin-bottom:10px;
+}
+.logo span{color:#a78bfa}
+.subtitle{
+text-align:center;
+color:#aab6cf;
+font-size:14px;
+margin-bottom:28px;
+}
+h2{text-align:center;margin-bottom:22px}
+label{
+display:block;
+font-size:13px;
+color:#d5dced;
+margin-bottom:7px;
+}
+input,select{
+width:100%;
+padding:13px;
+margin-bottom:17px;
+background:#080d20;
+border:1px solid #354568;
+border-radius:8px;
+color:white;
+font-size:14px;
+outline:none;
+}
+input:focus,select:focus{border-color:#a78bfa}
+button{
+width:100%;
+padding:14px;
+border:none;
+border-radius:8px;
+background:#7954e8;
+color:white;
+font-size:15px;
+font-weight:bold;
+cursor:pointer;
+}
+button:hover{opacity:.9}
+.note{
+text-align:center;
+font-size:12px;
+color:#8997b5;
+margin-top:20px;
+}
+.login{
+text-align:center;
+font-size:14px;
+margin-top:20px;
+color:#aab6cf;
+}
+a{color:#b9a6ff;text-decoration:none}
+.back{
+display:block;
+text-align:center;
+margin-top:20px;
+font-size:13px;
+color:#aab6cf;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="logo">ORVEX<span> BRIDGE</span></div>
+
+<p class="subtitle">
+Connecting People, Businesses and Opportunities Worldwide.
+</p>
+
+<h2>Create Your Account</h2>
+
+<form id="registerForm">
+
+<label for="fullname">Full Name</label>
+<input type="text" id="fullname" placeholder="Enter your full name" required>
+
+<label for="email">Email Address</label>
+<input type="email" id="email" placeholder="Enter your email address" required>
+
+<label for="country">Country</label>
+<select id="country" required>
+<option value="">Select your country</option>
+<option>Nigeria</option>
+<option>Ghana</option>
+<option>Kenya</option>
+<option>South Africa</option>
+<option>Uganda</option>
+<option>Tanzania</option>
+<option>United States</option>
+<option>United Kingdom</option>
+<option>Canada</option>
+<option>Germany</option>
+<option>France</option>
+<option>India</option>
+<option>United Arab Emirates</option>
+<option>Other</option>
+</select>
+
+<label for="accountType">Account Type</label>
+<select id="accountType" required>
+<option value="">Select account type</option>
+<option value="individual">Individual Account</option>
+<option value="business">Business Account</option>
+</select>
+
+<label for="password">Password</label>
+<input type="password" id="password" placeholder="Create a password" minlength="8" required>
+
+<label for="confirmPassword">Confirm Password</label>
+<input type="password" id="confirmPassword" placeholder="Confirm your password" minlength="8" required>
+
+<button type="submit">Create Free Account</button>
+
+</form>
+
+<p class="note">
+By registering, you agree to our Terms of Service and Privacy Policy.
+</p>
+
+<div class="login">
+Already have an account? <a href="login.html">Login</a>
+</div>
+
+<a href="index.html" class="back">← Back to Homepage</a>
+
+</div>
+
+<script>
+document.getElementById("registerForm").addEventListener("submit",function(e){
+e.preventDefault();
+
+const password=document.getElementById("password").value;
+const confirmPassword=document.getElementById("confirmPassword").value;
+
+if(password!==confirmPassword){
+alert("Your passwords do not match.");
+return;
+}
+
+alert("Registration system is being connected. Please check back soon.");
+});
+</script>
+
+</body>
+</html>
